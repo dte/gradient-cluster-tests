@@ -31,6 +31,7 @@ lr = 0.001
 batch_size = 128
 num_epochs = 300
 
+
 # Set up logging.
 experiment_id = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 run_logdir = './logs'
