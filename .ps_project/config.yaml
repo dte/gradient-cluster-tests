@@ -1,17 +1,28 @@
 version: 2
 
 workflows:
-  alexnet:
+  tensorboardtests:
     steps:
-      - name: "alexnet"
+      - name: "tensorboardtests"
         command: experiment.run_single_node
         params:
-          command: apt update && apt-get install -y git && pip install -r alexnet/requirements.txt && python3 alexnet/alexnet.py
+          command: apt update && apt-get install -y git && pip install -r tensorboardtests/requirements.txt && python3 tensorboardtests/tensorboardtests.py
           container: paperspace/fastai:2.0-CUDA9.2-fastbook-v0.0.11
           clusterId: cl8vdiuld
           machineType: P4000
           modelPath: /artifacts
           modelType: Tensorflow
+  # alexnet:
+  #   steps:
+  #     - name: "alexnet"
+  #       command: experiment.run_single_node
+  #       params:
+  #         command: apt update && apt-get install -y git && pip install -r alexnet/requirements.txt && python3 alexnet/alexnet.py
+  #         container: paperspace/fastai:2.0-CUDA9.2-fastbook-v0.0.11
+  #         clusterId: cl8vdiuld
+  #         machineType: P4000
+  #         modelPath: /artifacts
+  #         modelType: Tensorflow
   # tf2:
   #   steps:
   #     - name: "tf2"

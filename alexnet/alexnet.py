@@ -34,7 +34,7 @@ num_epochs = 300
 
 # Set up logging.
 experiment_id = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-run_logdir = './logs'
+run_logdir = '/logs'
 writer = SummaryWriter(log_dir=run_logdir)
 # writer = SummaryWriter(logdir=f"./logs/{experiment_id}")
 checkpoint_dir = Path(run_logdir)
