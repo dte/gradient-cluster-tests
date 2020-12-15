@@ -1,0 +1,3 @@
+torch==1.7
+torchvision==0.8
+git+git://github.com/Paperspace/gradient-utils.git@colin/cr2-82-create-new-init-function-in-metrics#egg=gradient-utils
