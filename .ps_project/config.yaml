@@ -6,7 +6,7 @@ workflows:
       - name: "alexnet"
         command: experiment.run_single_node
         params:
-          command: apt update && apt-get install -y git && pip install -r alexnet/requirements.txt && python alexnet/alexnet.py
+          command: apt update && apt-get install -y git && pip install -r alexnet/requirements.txt && python3 alexnet/alexnet.py
           container: paperspace/fastai:2.0-CUDA9.2-fastbook-v0.0.11
           clusterId: cl8vdiuld
           machineType: P4000
