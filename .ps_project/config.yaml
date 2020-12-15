@@ -12,25 +12,25 @@ workflows:
           machineType: P4000
           modelPath: /artifacts
           modelType: Tensorflow
-  tf2:
-    steps:
-      - name: "tf2"
-        command: experiment.run_single_node
-        params:
-          command: apt update && apt-get install -y git && pip install -r tf2/requirements.txt && python tf2/tf2.py
-          container: tensorflow/tensorflow:1.15.4-gpu-py3
-          clusterId: cl8vdiuld
-          machineType: P4000
-          modelPath: /artifacts
-          modelType: Tensorflow
-  pt:
-    steps:
-      - name: "pt"
-        command: experiment.run_single_node
-        params:
-          command: apt update && apt-get install -y git && pip install -r pytorch/requirements.txt && python pytorch/pytorch.py
-          container: tensorflow/tensorflow:1.15.4-gpu-py3
-          clusterId: cl8vdiuld
-          machineType: P4000
-          modelPath: /artifacts
-          modelType: Tensorflow
+  # tf2:
+  #   steps:
+  #     - name: "tf2"
+  #       command: experiment.run_single_node
+  #       params:
+  #         command: apt update && apt-get install -y git && pip install -r tf2/requirements.txt && python tf2/tf2.py
+  #         container: tensorflow/tensorflow:1.15.4-gpu-py3
+  #         clusterId: cl8vdiuld
+  #         machineType: P4000
+  #         modelPath: /artifacts
+  #         modelType: Tensorflow
+  # pt:
+  #   steps:
+  #     - name: "pt"
+  #       command: experiment.run_single_node
+  #       params:
+  #         command: apt update && apt-get install -y git && pip install -r pytorch/requirements.txt && python pytorch/pytorch.py
+  #         container: tensorflow/tensorflow:1.15.4-gpu-py3
+  #         clusterId: cl8vdiuld
+  #         machineType: P4000
+  #         modelPath: /artifacts
+  #         modelType: Tensorflow
